@@ -25,16 +25,6 @@ The setup used 1,097 labeled and 1,868 open-ended questions, run with greedy dec
 
 ![Accuracy of PATRA and simple baselines](docs/figures/reads_the_series.png)
 
-The code and weights explain why the series path has no effect:
-
-| Finding | Evidence |
-|---|---|
-| **Alignment acts as an average** | Attention in the alignment module is near uniform: replacing it with a plain mean changes its output by 0.005%. After alignment, 98.12% of a series token is the same for every question. |
-| **Training barely reaches it** | LoRA keeps the encoder and alignment weights frozen, whatever `--freeze_ts_encoder` says. GRPO with two samples per question gives near-binary advantages (±0.707). |
-| **Quoted numbers are not grounded** | 94.25% of the numbers Qwen quotes (series given as text) occur in the raw series, against 3.44% for PATRA. Yet 77.02% of numbers in the training answers are raw values, which the normalized input hides from PATRA. |
-| **ROUGE-L rewards wording** | One fixed sentence scores 21.21, above every baseline in the paper's Table 1. Flipping the trend direction in the gold answers still scores 94.49. |
-| **A question-only shortcut exists** | A logistic regression that reads only the question reaches 55.88%, the same kind of artifact as hypothesis-only baselines in NLI. |
-
 ## 3. Case studies: volatile series
 
 Evaluation series have at most 30 points, so they become only one or two 16-point patches, while the trend filter spans 25 patches (400 points). The latent trend and seasonality therefore collapse to one value per patch:
@@ -44,8 +34,6 @@ Evaluation series have at most 30 points, so they become only one or two 16-poin
 On the 287 most volatile evaluation series, PATRA gets 5 of 21 trend questions right. The report's main figure puts five of these failures next to the Qwen answer and the reference; green numbers occur in the series, red ones in neither the raw nor the normalized series:
 
 ![Five failures of PATRA next to Qwen and the reference](docs/case_study/failure_cases.png)
-
-All 21 trend questions, with one plot per series, are in [docs/case_study/CASE_STUDY.md](docs/case_study/CASE_STUDY.md). The selection is in [volatile_cases.json](results/analysis/volatile_cases.json) and the decomposition in [failure_decomposition.json](results/analysis/failure_decomposition.json).
 
 ## 4. Strengths, limitations and a proposal
 
@@ -77,9 +65,6 @@ python scripts/case_study_figures.py                                 # volatile-
 python scripts/readme_figures.py                                     # figures in this README
 python report/check_numbers.py                                         # every number in the report
 ```
-
-The report's main figure ([report/figures/failure_decomposition.pdf](report/figures/failure_decomposition.pdf)) was drawn by hand in draw.io from `failure_decomposition.json`. The smoke test and weight probe in `results/env/` and `results/analysis/` come from an earlier, longer version of the pipeline and are kept as records.
-
 
 ## Acknowledgements
 
