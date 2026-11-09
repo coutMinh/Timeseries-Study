@@ -24,7 +24,7 @@
 \begin{document}
 
 \twocolumn[
-\icmltitle{A Self-Study of PATRA: Reproduction, Insights, and a Proposal}
+\icmltitle{PATRA: Reproduction, Insights, and Proposal}
 
 \vskip -0.12in
 \begin{icmlauthorlist}
@@ -35,7 +35,7 @@
 ]
 
 \begin{abstract}
-Time Series Question Answering (TSQA) has emerged rapidly as sequential data becomes increasingly prevalent across various domains. Current approaches enable LLMs to answer questions and reason about trends and conclusions drawn from numerical data. However, existing methods often treat time series values as plain text or attach series embeddings to prompts, struggling to connect questions with temporal patterns such as trends and seasonality. PATRA addresses these challenges through pattern-aware alignment and a task-balanced reward mechanism. In this report, I investigate the published model and dataset, run intervention experiments to test whether the model actually understands the time series, and discuss the paper's strengths and limitations, proposed improvements and my reflections.
+Time Series Question Answering (TSQA) has emerged rapidly as sequential data becomes increasingly prevalent across various domains. Current approaches enable LLMs to answer questions and reason about trends and conclusions drawn from numerical data. However, existing methods often treat time series values as plain text or attach series embeddings to prompts, struggling to connect questions with temporal patterns such as trends and seasonality. PATRA addresses these challenges through pattern-aware alignment and a task-balanced reward mechanism. In this report, I investigate the published model and dataset, run intervention experiments to test whether the model actually understands the time series, and discuss the paper's strengths and limitations, proposed improvements and my reflections. Code and results are available at \href{https://github.com/coutMinh/Timeseries-Study}{\textcolor{magenta}{\texttt{code}}}.
 \end{abstract}
 
 
@@ -49,13 +49,13 @@ PATRA \citep{lu2026patra} identified two key limitations in existing TSQA approa
 \emph{Time-MQA} \citep{kong2025timemqa} lets users ask natural-language questions about time series, covering numerical analysis and open-ended reasoning.
 \emph{(ii) LLMs and multimodal LLMs for time series.}
 \emph{TimeOmni-1} \citep{guan2026timeomni} and \emph{Time-R1}~\cite{liu2025timer1} feed values to the LLM as text, while \emph{ChatTS} \citep{xie2025chatts} and \emph{IT-Former} \citep{wang2025itformer} treat the series as a separate modality. Recent work has used RL to improve LLMs' temporal reasoning~\citep{liu2025timer1}, including reasoning over numerical time series~\citep{guan2026timeomni}.
-\emph{(iv) Do LLMs actually read the series?}
+\emph{(iii) Do LLMs actually read the series?}
 To look inside these models, I asked one main question while reading these works: do they actually read the series? High scores alone cannot show this. For example, in NLI tasks, models predict from the hypothesis without reading the premise \citep{gururangan2018annotation}, and TSQA models could likewise answer from the question alone. For TSQA, \citet{chen2026evidence} alter the input series of four systems, and find that aggregate scores can hide how the numbers are used.
 
 \begin{figure}[!t]
 \vskip -0.1in
 \centering
-\includegraphics[width=1\columnwidth]{figures/robot_thumbnail.png}
+\includegraphics[width=1\columnwidth]{figures/robot_thumbnail.pdf}
 \vskip -0.05in
 \caption{TSQA problems.}
 \label{fig:thumbnail}
@@ -65,11 +65,9 @@ To look inside these models, I asked one main question while reading these works
 
 \textbf{Reproduction.}
 I ran inference based on the published weight and dataset of the original paper PATRA. Table~\ref{tab:repro} shows ROUGE-L close to the paper and accuracy 10.19--25.86 points below it. Four prompt and generation variants reach at most 52.05\%.
-The gap is not a setup error on my side: the original evaluation script scores my predictions identically, the data and weights match the released revisions, an older \texttt{transformers} (\texttt{4.46.3}) gives the same answer on all 1,097 labeled questions, and decoding is greedy, so no seed is involved.
-Only the authors can confirm whether the released checkpoint and script produced the paper's Table~1.
 
 \begin{table}[H]
-\caption{Re-run of the published PATRA-7B, with paper values in parentheses. Overall paper accuracy is converted from its Table~1.}
+\caption{Re-run of the published PATRA-7B, with paper values in parentheses.}
 \label{tab:repro}
 \vskip 0.05in
 \centering
@@ -96,12 +94,9 @@ compared with 47.49\% in the unmodified run (Table~\ref{tab:ablation}).
 Replacing the series with zeros changes 3.28\% of answers.
 In separate tests, changing the prompt template changes 18.41--25.43\%
 of answers.
-To see how much accuracy needs the series at all, I also trained small classifiers on the training set (lower half of Table~\ref{tab:ablation}).
-The unmodified run gets exactly as many questions right as always answering False or B (521 of 1,097), and a logistic regression that reads only the question reaches 55.88\%, a question-only shortcut like the hypothesis-only one in NLI.
-The series still carries signal: 16 simple statistics lift a tree model from 52.32\% to 57.79\%, and shuffling the series at test drops it to 53.60\%.
-So the benchmark does reward reading the series, but the released PATRA does not.
+
 \begin{table}[!t]
-\caption{Accuracy on the 1,097 labeled questions. Top: PATRA under inference-time interventions. Bottom: small classifiers trained on the training set.}
+\caption{Accuracy on the 1,097 labeled questions under interventions.}
 \label{tab:ablation}
 \vskip 0.05in
 \centering
@@ -114,11 +109,6 @@ Unmodified & 47.49 \\
 Series replaced by zeros & 48.13 \\
 Random encoder and alignment & 48.77 \\
 Alignment bypassed & 47.95 \\
-\midrule
-Always False / B & 47.49 \\
-Question only (logistic regression) & 55.88 \\
-Question + 16 series statistics (trees) & 57.79 \\
-Same trees, series shuffled at test & 53.60 \\
 \bottomrule
 \end{tabular*}
 \vskip -0.1in
@@ -139,8 +129,7 @@ The code normalizes each series and do not include offset and scale to the promp
 
 \emph{(4) My core question: text or embeddings?}
 \emph{TimeOmni-1} and \emph{Time-MQA} put the numerical sequence into the prompt as text, while \emph{PATRA} and \emph{ChatTS} turn it into embeddings with a dedicated encoder. I wondered whether text makes exact values easier to read and how the LLM learns to interpret an encoder's embeddings.
-The released models suggest an answer. On open-ended questions, 94.25\% of the numbers Qwen quotes occur in the raw series, against 3.44\% for PATRA. Among the numbers PATRA mentions, there are 4.11\% that occur in an unrelated series of the same length, so it matches its own series no better than chance.
-Inside PATRA, the alignment attention is nearly uniform: replacing it with a plain average changes its output by only 0.005\%.
+The released models suggest an answer. On open-ended questions, 94.25\% of the numbers Qwen quotes occur in the raw series, against 3.44\% for PATRA. Interestingly, some of the numbers PATRA quotes do not appear in any related series. Inside PATRA, the alignment attention is nearly uniform: replacing it with a plain average changes its output by only 0.005\%.
 
 \section{Strengths and Limitations}
 
@@ -162,7 +151,7 @@ PATRA encodes each 16-point patch as one token. It fuses these tokens with the q
 \end{figure*}
 
 
-\textbf{Proposals.} We propose Tool-Augmented Time-Series Reasoning, extending PATRA with an external numerical tool interface. During autoregressive generation, the LLM can invoke tools to retrieve exact observations or compute temporal statistics (e.g., local trends, extrema, and segment differences). The tool results are returned as textual evidence to the LLM, enabling it to verify numerical claims and refine its reasoning without reconstructing values from compressed embeddings. This requires modifying the decoding workflow and optionally fine-tuning the LLM for tool use, rather than retraining the entire encoder.
+\textbf{Proposals.} I propose Tool-Augmented Time-Series Reasoning, extending PATRA with an external numerical tool interface. During autoregressive generation, the LLM can invoke tools to retrieve exact observations or compute temporal statistics (e.g., local trends, extrema, and segment differences). The tool results are returned as textual evidence to the LLM, enabling it to verify numerical claims and refine its reasoning without reconstructing values from compressed embeddings. This requires modifying the decoding workflow and optionally fine-tuning the LLM for tool use, rather than retraining the entire encoder.
 
 \section{Research Direction and Reflection}
 
