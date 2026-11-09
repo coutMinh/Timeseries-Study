@@ -1,0 +1,78 @@
+[shard 2] selected=741 pending=741
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.10s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.10it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.29it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.20it/s]
+[shard 2] 10/741 17.7 tok/s 10.12 s/sample
+[shard 2] 20/741 17.2 tok/s 9.01 s/sample
+[shard 2] 30/741 17.0 tok/s 9.75 s/sample
+[shard 2] 40/741 16.9 tok/s 10.78 s/sample
+[shard 2] 50/741 16.9 tok/s 10.56 s/sample
+[shard 2] 60/741 16.8 tok/s 11.90 s/sample
+[shard 2] 70/741 16.8 tok/s 11.76 s/sample
+[shard 2] 80/741 16.8 tok/s 11.52 s/sample
+[shard 2] 90/741 16.8 tok/s 11.22 s/sample
+[shard 2] 100/741 16.8 tok/s 11.21 s/sample
+[shard 2] 110/741 16.8 tok/s 11.33 s/sample
+[shard 2] 120/741 16.8 tok/s 11.43 s/sample
+[shard 2] 130/741 16.8 tok/s 11.64 s/sample
+[shard 2] 140/741 16.8 tok/s 11.59 s/sample
+[shard 2] 150/741 16.8 tok/s 11.72 s/sample
+[shard 2] 160/741 16.8 tok/s 11.71 s/sample
+[shard 2] 170/741 16.8 tok/s 11.80 s/sample
+[shard 2] 180/741 16.8 tok/s 11.66 s/sample
+[shard 2] 190/741 16.8 tok/s 11.97 s/sample
+[shard 2] 200/741 16.8 tok/s 12.01 s/sample
+[shard 2] 210/741 16.7 tok/s 12.01 s/sample
+[shard 2] 220/741 16.7 tok/s 12.25 s/sample
+[shard 2] 230/741 16.7 tok/s 12.17 s/sample
+[shard 2] 240/741 16.7 tok/s 12.20 s/sample
+[shard 2] 250/741 16.7 tok/s 12.39 s/sample
+[shard 2] 260/741 16.7 tok/s 12.41 s/sample
+[shard 2] 270/741 16.7 tok/s 12.53 s/sample
+[shard 2] 280/741 16.7 tok/s 12.48 s/sample
+[shard 2] 290/741 16.7 tok/s 12.36 s/sample
+[shard 2] 300/741 16.7 tok/s 12.35 s/sample
+[shard 2] 310/741 16.7 tok/s 12.24 s/sample
+[shard 2] 320/741 16.7 tok/s 12.33 s/sample
+[shard 2] 330/741 16.7 tok/s 12.34 s/sample
+[shard 2] 340/741 16.7 tok/s 12.38 s/sample
+[shard 2] 350/741 16.7 tok/s 12.33 s/sample
+[shard 2] 360/741 16.7 tok/s 12.42 s/sample
+[shard 2] 370/741 16.7 tok/s 12.47 s/sample
+[shard 2] 380/741 16.7 tok/s 12.40 s/sample
+[shard 2] 390/741 16.7 tok/s 12.39 s/sample
+[shard 2] 400/741 16.7 tok/s 12.38 s/sample
+[shard 2] 410/741 16.7 tok/s 12.48 s/sample
+[shard 2] 420/741 16.7 tok/s 12.61 s/sample
+[shard 2] 430/741 16.7 tok/s 12.59 s/sample
+[shard 2] 440/741 16.7 tok/s 12.64 s/sample
+[shard 2] 450/741 16.7 tok/s 12.67 s/sample
+[shard 2] 460/741 16.7 tok/s 12.67 s/sample
+[shard 2] 470/741 16.7 tok/s 12.60 s/sample
+[shard 2] 480/741 16.7 tok/s 12.63 s/sample
+[shard 2] 490/741 16.7 tok/s 12.66 s/sample
+[shard 2] 500/741 16.7 tok/s 12.57 s/sample
+[shard 2] 510/741 16.7 tok/s 12.61 s/sample
+[shard 2] 520/741 16.7 tok/s 12.63 s/sample
+[shard 2] 530/741 16.7 tok/s 12.70 s/sample
+[shard 2] 540/741 16.7 tok/s 12.81 s/sample
+[shard 2] 550/741 16.7 tok/s 12.88 s/sample
+[shard 2] 560/741 16.7 tok/s 12.96 s/sample
+[shard 2] 570/741 16.7 tok/s 12.98 s/sample
+[shard 2] 580/741 16.7 tok/s 13.02 s/sample
+[shard 2] 590/741 16.7 tok/s 12.99 s/sample
+[shard 2] 600/741 16.7 tok/s 12.96 s/sample
+[shard 2] 610/741 16.7 tok/s 12.99 s/sample
+[shard 2] 620/741 16.7 tok/s 13.05 s/sample
+[shard 2] 630/741 16.7 tok/s 13.01 s/sample
+[shard 2] 640/741 16.7 tok/s 13.07 s/sample
+[shard 2] 650/741 16.7 tok/s 13.18 s/sample
+[shard 2] 660/741 16.7 tok/s 13.21 s/sample
+[shard 2] 670/741 16.7 tok/s 13.37 s/sample
+[shard 2] 680/741 16.7 tok/s 13.42 s/sample
+[shard 2] 690/741 16.7 tok/s 13.49 s/sample
+[shard 2] 700/741 16.7 tok/s 13.52 s/sample
+[shard 2] 710/741 16.9 tok/s 13.47 s/sample
+[shard 2] 720/741 17.1 tok/s 13.38 s/sample
+[shard 2] 730/741 17.3 tok/s 13.24 s/sample
+[shard 2] 740/741 17.5 tok/s 13.11 s/sample
+[shard 2] 741/741 17.5 tok/s 13.09 s/sample
+[shard 2] done {"finished": 741, "tokens": 169574, "seconds": 9702.0, "tok_per_s": 17.48, "s_per_sample": 13.093, "failures": 0, "max_memory_reserved_gb": 14.38}

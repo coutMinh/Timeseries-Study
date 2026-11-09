@@ -1,0 +1,20 @@
+# Upstream repository: no license file, clone it yourself (see README)
+PATRA/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# LaTeX build files
+*.aux
+*.log
+!results/**/*.log
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+report/main.pdf
+
+# Secrets
+.env

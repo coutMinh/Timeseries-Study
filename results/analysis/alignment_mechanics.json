@@ -1,0 +1,67 @@
+{
+ "revision": "5cf8191e",
+ "n_questions": 1097,
+ "validation_against_gpu_probe": {
+  "encoded_norm": {
+   "recomputed_mean": 0.56123,
+   "gpu_probe_mean": 0.56122,
+   "pearson_r": 1.0,
+   "max_abs_difference": 6e-05
+  },
+  "aligned_norm": {
+   "recomputed_mean": 0.31255,
+   "gpu_probe_mean": 0.31248,
+   "pearson_r": 1.0,
+   "max_abs_difference": 0.00012
+  },
+  "aligned_rel_zero": {
+   "recomputed_mean": 0.12346,
+   "gpu_probe_mean": 0.12348,
+   "pearson_r": 1.0,
+   "max_abs_difference": 0.00029
+  }
+ },
+ "text_extraction_attention": {
+  "complete": {
+   "max_gap_from_uniform": 0.00026300549507141113
+  },
+  "trend": {
+   "max_gap_from_uniform": 0.0002643764019012451
+  },
+  "seasonal": {
+   "max_gap_from_uniform": 0.00023809075355529785
+  }
+ },
+ "alignment_attention_by_branch": {
+  "complete": {
+   "max_abs_score": 0.00231,
+   "max_gap_from_uniform": 0.000222,
+   "mean_mass_on_series_tokens": 0.1257
+  },
+  "trend": {
+   "max_abs_score": 0.00114,
+   "max_gap_from_uniform": 8.2e-05,
+   "mean_mass_on_series_tokens": 0.1257
+  },
+  "seasonal": {
+   "max_abs_score": 0.00138,
+   "max_gap_from_uniform": 9.9e-05,
+   "mean_mass_on_series_tokens": 0.1257
+  }
+ },
+ "output_change_if_attention_is_replaced_by_plain_average": {
+  "mean_relative": 4.8e-05,
+  "max_relative": 0.000285
+ },
+ "first_patch_token_single_series": {
+  "n": 1063,
+  "encoded": {
+   "constant_energy_share": 0.0129,
+   "mean_pairwise_cosine": 0.0075
+  },
+  "aligned": {
+   "constant_energy_share": 0.9812,
+   "mean_pairwise_cosine": 0.9814
+  }
+ }
+}

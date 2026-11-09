@@ -1,0 +1,62 @@
+{
+ "passed": true,
+ "demo": {
+  "exit": 0,
+  "response_chars": 355
+ },
+ "parity": {
+  "comprehension": {
+   "official": {
+    "acc": 0.6666666666666666,
+    "rougeL": 0.2537313432835821
+   },
+   "worker": {
+    "acc": 0.6666666666666666,
+    "rougeL": 0.2537313432835821
+   },
+   "match": true
+  },
+  "recognition": {
+   "official": {
+    "acc": 0.6666666666666666,
+    "rougeL": 0.191025641025641
+   },
+   "worker": {
+    "acc": 0.6666666666666666,
+    "rougeL": 0.191025641025641
+   },
+   "match": true
+  },
+  "reasoning": {
+   "official": {
+    "acc": 0.3333333333333333,
+    "rougeL": 0.2569812654648286
+   },
+   "worker": {
+    "acc": 0.3333333333333333,
+    "rougeL": 0.2569812654648286
+   },
+   "match": true
+  },
+  "prescience": {
+   "official": {
+    "acc": 0.6666666666666666,
+    "rougeL": 0.21868754163890738
+   },
+   "worker": {
+    "acc": 0.6666666666666666,
+    "rougeL": 0.21868754163890738
+   },
+   "match": true
+  }
+ },
+ "speed": {
+  "finished": 20,
+  "tokens": 810,
+  "seconds": 12.4,
+  "tok_per_s": 65.27,
+  "s_per_sample": 0.62,
+  "failures": 0,
+  "max_memory_reserved_gb": 15.71
+ }
+}

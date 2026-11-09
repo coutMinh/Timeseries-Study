@@ -1,0 +1,49 @@
+{
+ "run": "patra__prompt_chatml",
+ "n": 1097,
+ "duplicates": 0,
+ "malformed_lines": 0,
+ "logged_errors": 0,
+ "wall_clock_s": 729.4,
+ "mean_s_per_sample": 2.41,
+ "mean_tokens": 43.5,
+ "truncated": 2,
+ "tasks": {
+  "comprehension": {
+   "acc_correct": 39,
+   "acc_n": 116,
+   "acc_expected_n": 116,
+   "acc_pct": 33.62,
+   "rouge_n": 0,
+   "rouge_expected_n": 651,
+   "rouge_pct": null
+  },
+  "recognition": {
+   "acc_correct": 422,
+   "acc_n": 725,
+   "acc_expected_n": 725,
+   "acc_pct": 58.21,
+   "rouge_n": 0,
+   "rouge_expected_n": 455,
+   "rouge_pct": null
+  },
+  "reasoning": {
+   "acc_correct": 52,
+   "acc_n": 148,
+   "acc_expected_n": 148,
+   "acc_pct": 35.14,
+   "rouge_n": 0,
+   "rouge_expected_n": 571,
+   "rouge_pct": null
+  },
+  "prescience": {
+   "acc_correct": 50,
+   "acc_n": 108,
+   "acc_expected_n": 108,
+   "acc_pct": 46.3,
+   "rouge_n": 0,
+   "rouge_expected_n": 191,
+   "rouge_pct": null
+  }
+ }
+}

@@ -1,0 +1,38 @@
+[shard 3] selected=275 pending=275
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.35s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.14s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.03s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.24it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.08it/s]
+/home/marimo/patra_work/venv_readme/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/marimo/patra_work/venv_readme/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/marimo/patra_work/venv_readme/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:612: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+`get_max_cache()` is deprecated for all Cache classes. Use `get_max_cache_shape()` instead. Calling `get_max_cache()` will raise error from v4.48
+[shard 3] 10/275 16.2 tok/s 3.92 s/sample
+[shard 3] 20/275 16.5 tok/s 3.82 s/sample
+[shard 3] 30/275 16.7 tok/s 3.89 s/sample
+[shard 3] 40/275 16.7 tok/s 3.61 s/sample
+[shard 3] 50/275 16.7 tok/s 3.36 s/sample
+[shard 3] 60/275 16.6 tok/s 3.16 s/sample
+[shard 3] 70/275 16.6 tok/s 3.05 s/sample
+[shard 3] 80/275 16.6 tok/s 2.98 s/sample
+[shard 3] 90/275 16.6 tok/s 2.86 s/sample
+[shard 3] 100/275 16.6 tok/s 2.81 s/sample
+[shard 3] 110/275 16.6 tok/s 2.77 s/sample
+[shard 3] 120/275 16.6 tok/s 2.69 s/sample
+[shard 3] 130/275 16.6 tok/s 2.65 s/sample
+[shard 3] 140/275 16.6 tok/s 2.61 s/sample
+[shard 3] 150/275 16.6 tok/s 2.58 s/sample
+[shard 3] 160/275 16.6 tok/s 2.57 s/sample
+[shard 3] 170/275 16.6 tok/s 2.54 s/sample
+[shard 3] 180/275 16.6 tok/s 2.54 s/sample
+[shard 3] 190/275 16.6 tok/s 2.57 s/sample
+[shard 3] 200/275 16.6 tok/s 2.61 s/sample
+[shard 3] 210/275 16.6 tok/s 2.59 s/sample
+[shard 3] 220/275 16.8 tok/s 2.55 s/sample
+[shard 3] 230/275 16.9 tok/s 2.51 s/sample
+[shard 3] 240/275 17.1 tok/s 2.47 s/sample
+[shard 3] 250/275 17.3 tok/s 2.43 s/sample
+[shard 3] 260/275 17.8 tok/s 2.35 s/sample
+[shard 3] 270/275 18.3 tok/s 2.29 s/sample
+[shard 3] 275/275 18.5 tok/s 2.26 s/sample
+[shard 3] done {"finished": 275, "tokens": 11460, "seconds": 620.5, "tok_per_s": 18.47, "s_per_sample": 2.256, "failures": 0, "max_memory_reserved_gb": 17.13}

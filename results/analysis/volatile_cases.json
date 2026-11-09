@@ -1,0 +1,67 @@
+{
+ "source": "results/runs/patra__official/predictions.jsonl",
+ "definition": "roughness = mean|diff| / std; volatile = roughness >= percentile over single-series samples",
+ "percentile": 90,
+ "min_length": 12,
+ "threshold": 1.0016,
+ "n_single_series": 2867,
+ "n_volatile": 287,
+ "reference_reasoning_5": {
+  "roughness": 1.1892,
+  "lag1_autocorr": -0.0285,
+  "std_ratio_halves": 1.4126,
+  "mean_shift_halves": 0.388,
+  "ols_slope": 0.0713
+ },
+ "reference_roughness_percentile": 96.8,
+ "reference_percentile_std_ratio": 40.1,
+ "reference_percentile_mean_shift": 23.4,
+ "labeled_all_single": {
+  "n": 1030,
+  "correct": 491,
+  "acc_pct": 47.67
+ },
+ "labeled_volatile": {
+  "n": 110,
+  "correct": 60,
+  "acc_pct": 54.55
+ },
+ "labeled_rest": {
+  "n": 920,
+  "correct": 431,
+  "acc_pct": 46.85
+ },
+ "trend_labeled_volatile": {
+  "n": 21,
+  "correct": 5,
+  "acc_pct": 23.81
+ },
+ "trend_labeled_rest": {
+  "n": 143,
+  "correct": 46,
+  "acc_pct": 32.17
+ },
+ "trend_volatile_samples": [
+  "comprehension:626",
+  "reasoning:5",
+  "reasoning:77",
+  "reasoning:84",
+  "reasoning:91",
+  "reasoning:99",
+  "reasoning:114",
+  "reasoning:174",
+  "reasoning:229",
+  "reasoning:291",
+  "reasoning:296",
+  "reasoning:364",
+  "reasoning:380",
+  "reasoning:383",
+  "reasoning:466",
+  "reasoning:508",
+  "reasoning:542",
+  "reasoning:577",
+  "reasoning:614",
+  "reasoning:615",
+  "reasoning:696"
+ ]
+}

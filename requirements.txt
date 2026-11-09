@@ -1,0 +1,9 @@
+# CPU analysis scripts in scripts/. The GPU notebook (notebooks/reproduce.py) sets up its own environment.
+numpy
+scipy
+scikit-learn
+rouge-score
+matplotlib
+torch
+tokenizers
+safetensors

@@ -1,0 +1,49 @@
+{
+ "run": "patra__official",
+ "n": 2965,
+ "duplicates": 0,
+ "malformed_lines": 0,
+ "logged_errors": 0,
+ "wall_clock_s": 2182.3,
+ "mean_s_per_sample": 2.597,
+ "mean_tokens": 46.0,
+ "truncated": 1,
+ "tasks": {
+  "comprehension": {
+   "acc_correct": 35,
+   "acc_n": 116,
+   "acc_expected_n": 116,
+   "acc_pct": 30.17,
+   "rouge_n": 651,
+   "rouge_expected_n": 651,
+   "rouge_pct": 27.39
+  },
+  "recognition": {
+   "acc_correct": 392,
+   "acc_n": 725,
+   "acc_expected_n": 725,
+   "acc_pct": 54.07,
+   "rouge_n": 455,
+   "rouge_expected_n": 455,
+   "rouge_pct": 26.02
+  },
+  "reasoning": {
+   "acc_correct": 48,
+   "acc_n": 148,
+   "acc_expected_n": 148,
+   "acc_pct": 32.43,
+   "rouge_n": 571,
+   "rouge_expected_n": 571,
+   "rouge_pct": 29.04
+  },
+  "prescience": {
+   "acc_correct": 46,
+   "acc_n": 108,
+   "acc_expected_n": 108,
+   "acc_pct": 42.59,
+   "rouge_n": 191,
+   "rouge_expected_n": 191,
+   "rouge_pct": 27.55
+  }
+ }
+}

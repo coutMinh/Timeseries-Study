@@ -1,0 +1,285 @@
+{
+ "source": "results/runs/patra__official/predictions.jsonl",
+ "patch": 16,
+ "pca": {
+  "n_single_series_samples": 2931,
+  "trend_pc1_explained_variance": 0.331,
+  "seasonal_pc1_explained_variance": 0.5272
+ },
+ "cases": [
+  {
+   "sample_id": "reasoning:5",
+   "question": "Given the data <ts><ts/>, there is a general upward trend. True or False?",
+   "question_format": "true/false",
+   "series": [
+    12.0,
+    17.0,
+    12.0,
+    18.0,
+    13.0,
+    11.0,
+    20.0,
+    16.0,
+    9.0,
+    8.0,
+    7.0,
+    8.0,
+    10.0,
+    15.0,
+    22.0,
+    12.0,
+    5.0,
+    21.0,
+    8.0,
+    16.0,
+    16.0,
+    26.0,
+    11.0,
+    13.0
+   ],
+   "n_points": 24,
+   "n_tokens": 2,
+   "gold": "F",
+   "gold_short": "F",
+   "pred": "True",
+   "pred_short": "True",
+   "score": 0.0,
+   "response": "<think>\nThe data shows an initial decrease followed by an increase, indicating a general upward trend.\n</think>\n\\boxed{True}",
+   "reasoning": "The data shows an initial decrease followed by an increase, indicating a general upward trend.",
+   "trend_pc1": [
+    0.193,
+    0.1854
+   ],
+   "seasonal_pc1": [
+    -0.0142,
+    0.0142
+   ],
+   "seasonal_norm_over_token_norm": [
+    0.6674,
+    0.6542
+   ],
+   "numbers_in_answer": [],
+   "numbers_in_raw_series": [],
+   "numbers_in_normalized_series": []
+  },
+  {
+   "sample_id": "reasoning:77",
+   "question": "The data points <ts><ts/> suggest an upward trend overall. True or false?",
+   "question_format": "true/false",
+   "series": [
+    13.0,
+    7.0,
+    11.0,
+    15.0,
+    9.0,
+    13.0,
+    9.0,
+    10.0,
+    20.0,
+    11.0,
+    12.0,
+    15.0,
+    15.0,
+    16.0,
+    5.0,
+    11.0,
+    8.0,
+    8.0,
+    15.0,
+    10.0,
+    12.0,
+    3.0,
+    38.0,
+    9.0
+   ],
+   "n_points": 24,
+   "n_tokens": 2,
+   "gold": "F",
+   "gold_short": "F",
+   "pred": "True",
+   "pred_short": "True",
+   "score": 0.0,
+   "response": "<think>\nThe data shows a general increase from -0.49 to 0.38, indicating an upward trend.\n</think>\n\\boxed{True}",
+   "reasoning": "The data shows a general increase from -0.49 to 0.38, indicating an upward trend.",
+   "trend_pc1": [
+    -0.0573,
+    -0.0541
+   ],
+   "seasonal_pc1": [
+    -0.0367,
+    0.0367
+   ],
+   "seasonal_norm_over_token_norm": [
+    1.101,
+    0.5868
+   ],
+   "numbers_in_answer": [
+    "-0.49",
+    "0.38"
+   ],
+   "numbers_in_raw_series": [],
+   "numbers_in_normalized_series": []
+  },
+  {
+   "sample_id": "reasoning:380",
+   "question": "Consider the data points <ts><ts/>. What is the general trend observed in these data points? A] Increasing B] Decreasing C] No clear trend D] Cyclical",
+   "question_format": "multiple_choice",
+   "series": [
+    8.0,
+    5.0,
+    13.0,
+    6.0,
+    10.0,
+    20.0,
+    24.0,
+    14.0,
+    21.0,
+    16.0,
+    21.0,
+    6.0,
+    11.0,
+    14.0,
+    35.0,
+    23.0,
+    0.0,
+    10.0,
+    33.0,
+    12.0,
+    7.0,
+    7.0,
+    12.0,
+    10.0
+   ],
+   "n_points": 24,
+   "n_tokens": 2,
+   "gold": "D",
+   "gold_short": "D",
+   "pred": "C",
+   "pred_short": "C",
+   "score": 0.0,
+   "response": "<think>The data shows a general downward trend initially but stabilizes around -0.45 to -0.35, indicating no clear trend or cyclical pattern.</think>\n\\boxed{C}",
+   "reasoning": "The data shows a general downward trend initially but stabilizes around -0.45 to -0.35, indicating no clear trend or cyclical pattern.",
+   "trend_pc1": [
+    -0.1693,
+    -0.1615
+   ],
+   "seasonal_pc1": [
+    -0.0138,
+    0.0138
+   ],
+   "seasonal_norm_over_token_norm": [
+    0.596,
+    0.7025
+   ],
+   "numbers_in_answer": [
+    "-0.45",
+    "-0.35"
+   ],
+   "numbers_in_raw_series": [],
+   "numbers_in_normalized_series": []
+  },
+  {
+   "sample_id": "reasoning:615",
+   "question": "The time series data <ts><ts/> shows an overall decreasing trend. True or False?",
+   "question_format": "true/false",
+   "series": [
+    66.0,
+    33.0,
+    31.0,
+    20.0,
+    23.0,
+    13.0,
+    50.0,
+    16.0,
+    22.0,
+    58.0,
+    31.0,
+    32.0,
+    14.0,
+    29.0
+   ],
+   "n_points": 14,
+   "n_tokens": 1,
+   "gold": "F",
+   "gold_short": "F",
+   "pred": "True",
+   "pred_short": "True",
+   "score": 0.0,
+   "response": "<think>\nThe data starts at 0.5 and generally decreases to -0.49, indicating an overall decreasing trend.\n</think>\n\\boxed{True}",
+   "reasoning": "The data starts at 0.5 and generally decreases to -0.49, indicating an overall decreasing trend.",
+   "trend_pc1": [
+    0.0529
+   ],
+   "seasonal_pc1": [
+    0.0
+   ],
+   "seasonal_norm_over_token_norm": [
+    0.0
+   ],
+   "numbers_in_answer": [
+    "0.5",
+    "-0.49"
+   ],
+   "numbers_in_raw_series": [],
+   "numbers_in_normalized_series": []
+  },
+  {
+   "sample_id": "comprehension:89",
+   "question": "Given the time series data points <ts><ts/>, summarize the overall movement trend.",
+   "question_format": "open_ended_question",
+   "series": [
+    5.0,
+    13.0,
+    7.0,
+    27.0,
+    6.0,
+    5.0,
+    8.0,
+    5.0,
+    2.0,
+    18.0,
+    3.0,
+    7.0,
+    10.0,
+    6.0,
+    7.0,
+    5.0,
+    10.0,
+    7.0,
+    7.0,
+    8.0,
+    2.0,
+    5.0,
+    10.0,
+    5.0
+   ],
+   "n_points": 24,
+   "n_tokens": 2,
+   "gold": "The data appears to have erratic fluctuations with no clear trend. It starts with moderate values, spikes to a high at 27.0, then fluctuates with small ups and downs, ending at a moderate value. This indicates a lack of consistent trend and significant variability in the series.",
+   "gold_short": "open-ended",
+   "pred": null,
+   "pred_short": "open-ended",
+   "score": 0.3218390804597701,
+   "response": "The overall trend shows an initial increase followed by a decrease. The data starts with a rise from -0.49 to 0.31 and then declines back towards negative values, indicating a peak and subsequent decline in the series.",
+   "reasoning": "The overall trend shows an initial increase followed by a decrease. The data starts with a rise from -0.49 to 0.31 and then declines back towards negative values, indicating a peak and subsequent decline in the series.",
+   "trend_pc1": [
+    0.0626,
+    0.0537
+   ],
+   "seasonal_pc1": [
+    0.1106,
+    -0.1106
+   ],
+   "seasonal_norm_over_token_norm": [
+    0.4971,
+    1.6666
+   ],
+   "numbers_in_answer": [
+    "-0.49",
+    "0.31"
+   ],
+   "numbers_in_raw_series": [],
+   "numbers_in_normalized_series": []
+  }
+ ]
+}

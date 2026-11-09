@@ -1,0 +1,9 @@
+{
+ "finished": 274,
+ "tokens": 12689,
+ "seconds": 674.8,
+ "tok_per_s": 18.8,
+ "s_per_sample": 2.463,
+ "failures": 0,
+ "max_memory_reserved_gb": 15.97
+}

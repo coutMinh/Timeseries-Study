@@ -1,0 +1,49 @@
+{
+ "run": "patra__ts_zero",
+ "n": 1097,
+ "duplicates": 0,
+ "malformed_lines": 0,
+ "logged_errors": 0,
+ "wall_clock_s": 683.4,
+ "mean_s_per_sample": 2.234,
+ "mean_tokens": 40.8,
+ "truncated": 1,
+ "tasks": {
+  "comprehension": {
+   "acc_correct": 38,
+   "acc_n": 116,
+   "acc_expected_n": 116,
+   "acc_pct": 32.76,
+   "rouge_n": 0,
+   "rouge_expected_n": 651,
+   "rouge_pct": null
+  },
+  "recognition": {
+   "acc_correct": 398,
+   "acc_n": 725,
+   "acc_expected_n": 725,
+   "acc_pct": 54.9,
+   "rouge_n": 0,
+   "rouge_expected_n": 455,
+   "rouge_pct": null
+  },
+  "reasoning": {
+   "acc_correct": 46,
+   "acc_n": 148,
+   "acc_expected_n": 148,
+   "acc_pct": 31.08,
+   "rouge_n": 0,
+   "rouge_expected_n": 571,
+   "rouge_pct": null
+  },
+  "prescience": {
+   "acc_correct": 46,
+   "acc_n": 108,
+   "acc_expected_n": 108,
+   "acc_pct": 42.59,
+   "rouge_n": 0,
+   "rouge_expected_n": 191,
+   "rouge_pct": null
+  }
+ }
+}

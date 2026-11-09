@@ -1,0 +1,4 @@
+{"subset": "smoke", "shards": 1, "wall_clock_s": 21.5, "exit_codes": [0]}
+{"subset": "pilot", "shards": 4, "wall_clock_s": 218.2, "exit_codes": [0, 0, 0, 0]}
+{"subset": "labeled", "shards": 4, "wall_clock_s": 607.0, "exit_codes": [0, 0, 0, 0]}
+{"subset": "open", "shards": 4, "wall_clock_s": 1335.6, "exit_codes": [0, 0, 0, 0]}

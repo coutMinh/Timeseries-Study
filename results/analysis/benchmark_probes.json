@@ -1,0 +1,351 @@
+{
+ "labeled": {
+  "patra_official": {
+   "correct": 521,
+   "acc_pct": 47.49,
+   "by_task": {
+    "comprehension": {
+     "n": 116,
+     "correct": 35,
+     "acc_pct": 30.17
+    },
+    "recognition": {
+     "n": 725,
+     "correct": 392,
+     "acc_pct": 54.07
+    },
+    "reasoning": {
+     "n": 148,
+     "correct": 48,
+     "acc_pct": 32.43
+    },
+    "prescience": {
+     "n": 108,
+     "correct": 46,
+     "acc_pct": 42.59
+    }
+   },
+   "only_this_correct": 0,
+   "only_patra_correct": 0,
+   "mcnemar_p_vs_patra": 1.0
+  },
+  "qwen_official": {
+   "correct": 488,
+   "acc_pct": 44.48,
+   "by_task": {
+    "comprehension": {
+     "n": 116,
+     "correct": 48,
+     "acc_pct": 41.38
+    },
+    "recognition": {
+     "n": 725,
+     "correct": 354,
+     "acc_pct": 48.83
+    },
+    "reasoning": {
+     "n": 148,
+     "correct": 44,
+     "acc_pct": 29.73
+    },
+    "prescience": {
+     "n": 108,
+     "correct": 42,
+     "acc_pct": 38.89
+    }
+   },
+   "only_this_correct": 194,
+   "only_patra_correct": 227,
+   "mcnemar_p_vs_patra": 0.11875
+  },
+  "paper_total_correct_converted": 657,
+  "constant_from_train_labels": {
+   "labels": {
+    "true/false": "F",
+    "multiple_choice": "B"
+   },
+   "correct": 521,
+   "acc_pct": 47.49,
+   "by_task": {
+    "comprehension": {
+     "n": 116,
+     "correct": 52,
+     "acc_pct": 44.83
+    },
+    "recognition": {
+     "n": 725,
+     "correct": 375,
+     "acc_pct": 51.72
+    },
+    "reasoning": {
+     "n": 148,
+     "correct": 58,
+     "acc_pct": 39.19
+    },
+    "prescience": {
+     "n": 108,
+     "correct": 36,
+     "acc_pct": 33.33
+    }
+   },
+   "only_this_correct": 270,
+   "only_patra_correct": 270,
+   "mcnemar_p_vs_patra": 1.0
+  },
+  "question_only_tfidf_logreg": {
+   "model_selection": {
+    "true/false": {
+     "best_C": 0.3,
+     "cv_accuracy_pct": 72.92,
+     "n_train": 5528,
+     "eval_correct": 328,
+     "eval_n": 457,
+     "patra_eval_correct": 276
+    },
+    "multiple_choice": {
+     "best_C": 0.3,
+     "cv_accuracy_pct": 42.3,
+     "n_train": 6913,
+     "eval_correct": 285,
+     "eval_n": 640,
+     "patra_eval_correct": 245
+    }
+   },
+   "true_false_word_cues": {
+    "towards_true": [
+     "change",
+     "high volatility",
+     "structural",
+     "break",
+     "ts is",
+     "data point",
+     "structural break",
+     "reversal",
+     "high",
+     "anomaly at",
+     "followed",
+     "trend reversal",
+     "followed by",
+     "shows high",
+     "at"
+    ],
+    "towards_false": [
+     "seasonal",
+     "seasonality",
+     "clear",
+     "low",
+     "low volatility",
+     "clear seasonal",
+     "seasonal pattern",
+     "exhibits clear",
+     "of seasonality",
+     "trend true",
+     "any",
+     "there",
+     "ts shows",
+     "present true",
+     "seasonality in"
+    ]
+   },
+   "correct": 613,
+   "acc_pct": 55.88,
+   "by_task": {
+    "comprehension": {
+     "n": 116,
+     "correct": 50,
+     "acc_pct": 43.1
+    },
+    "recognition": {
+     "n": 725,
+     "correct": 412,
+     "acc_pct": 56.83
+    },
+    "reasoning": {
+     "n": 148,
+     "correct": 95,
+     "acc_pct": 64.19
+    },
+    "prescience": {
+     "n": 108,
+     "correct": 56,
+     "acc_pct": 51.85
+    }
+   },
+   "only_this_correct": 251,
+   "only_patra_correct": 159,
+   "mcnemar_p_vs_patra": 1e-05,
+   "questions_never_seen_in_train": {
+    "n": 975,
+    "this_model_correct": 531,
+    "patra_correct": 450
+   }
+  },
+  "series_lift": {
+   "question_only_trees": {
+    "correct": 574,
+    "acc_pct": 52.32,
+    "by_task": {
+     "comprehension": {
+      "n": 116,
+      "correct": 44,
+      "acc_pct": 37.93
+     },
+     "recognition": {
+      "n": 725,
+      "correct": 382,
+      "acc_pct": 52.69
+     },
+     "reasoning": {
+      "n": 148,
+      "correct": 95,
+      "acc_pct": 64.19
+     },
+     "prescience": {
+      "n": 108,
+      "correct": 53,
+      "acc_pct": 49.07
+     }
+    },
+    "only_this_correct": 248,
+    "only_patra_correct": 195,
+    "mcnemar_p_vs_patra": 0.0134
+   },
+   "question_plus_series_stats_trees": {
+    "correct": 634,
+    "acc_pct": 57.79,
+    "by_task": {
+     "comprehension": {
+      "n": 116,
+      "correct": 45,
+      "acc_pct": 38.79
+     },
+     "recognition": {
+      "n": 725,
+      "correct": 424,
+      "acc_pct": 58.48
+     },
+     "reasoning": {
+      "n": 148,
+      "correct": 103,
+      "acc_pct": 69.59
+     },
+     "prescience": {
+      "n": 108,
+      "correct": 62,
+      "acc_pct": 57.41
+     }
+    },
+    "only_this_correct": 280,
+    "only_patra_correct": 167,
+    "mcnemar_p_vs_patra": 0.0
+   },
+   "same_model_with_series_shuffled_at_test": {
+    "correct": 588,
+    "acc_pct": 53.6,
+    "by_task": {
+     "comprehension": {
+      "n": 116,
+      "correct": 46,
+      "acc_pct": 39.66
+     },
+     "recognition": {
+      "n": 725,
+      "correct": 389,
+      "acc_pct": 53.66
+     },
+     "reasoning": {
+      "n": 148,
+      "correct": 96,
+      "acc_pct": 64.86
+     },
+     "prescience": {
+      "n": 108,
+      "correct": 57,
+      "acc_pct": 52.78
+     }
+    },
+    "only_this_correct": 263,
+    "only_patra_correct": 196,
+    "mcnemar_p_vs_patra": 0.00203
+   },
+   "series_stats_vs_question_only": {
+    "only_with_series_correct": 123,
+    "only_question_correct": 63,
+    "mcnemar_p": 1e-05
+   }
+  }
+ },
+ "open_ended": {
+  "paper_patra_by_task": {
+   "comprehension": 25.67,
+   "recognition": 25.46,
+   "reasoning": 27.36,
+   "prescience": 27.06
+  },
+  "train_median_answer_words": 35,
+  "fixed_sentence": "The series shows a gradual increasing trend. The values increase from 8.0 to 71.0, with some consistency and smoothness in the upward trend.",
+  "words_median": {
+   "eval_gold": 35.0,
+   "patra": 33.0,
+   "qwen": 135.0
+  },
+  "patra": {
+   "overall_pct": 27.58,
+   "by_task": {
+    "comprehension": 27.39,
+    "recognition": 26.02,
+    "reasoning": 29.04,
+    "prescience": 27.55
+   }
+  },
+  "qwen": {
+   "overall_pct": 15.6,
+   "by_task": {
+    "comprehension": 18.74,
+    "recognition": 10.6,
+    "reasoning": 17.56,
+    "prescience": 10.96
+   }
+  },
+  "qwen_first_train_median_words": {
+   "overall_pct": 20.42,
+   "by_task": {
+    "comprehension": 21.68,
+    "recognition": 17.02,
+    "reasoning": 22.35,
+    "prescience": 18.49
+   }
+  },
+  "patra_first_train_median_words": {
+   "overall_pct": 27.63,
+   "by_task": {
+    "comprehension": 27.52,
+    "recognition": 26.03,
+    "reasoning": 29.05,
+    "prescience": 27.56
+   }
+  },
+  "fixed_sentence_no_question_no_series": {
+   "overall_pct": 21.21,
+   "by_task": {
+    "comprehension": 20.49,
+    "recognition": 18.88,
+    "reasoning": 24.12,
+    "prescience": 20.56
+   }
+  },
+  "nearest_train_question_answer_no_series": {
+   "overall_pct": 23.23,
+   "by_task": {
+    "comprehension": 23.78,
+    "recognition": 21.15,
+    "reasoning": 24.15,
+    "prescience": 23.5
+   }
+  },
+  "gold_with_opposite_direction": {
+   "n": 1169,
+   "rouge_pct": 94.49
+  }
+ }
+}

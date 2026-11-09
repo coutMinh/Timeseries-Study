@@ -1,0 +1,49 @@
+{
+ "run": "qwen__official",
+ "n": 2965,
+ "duplicates": 0,
+ "malformed_lines": 0,
+ "logged_errors": 0,
+ "wall_clock_s": 9751.0,
+ "mean_s_per_sample": 12.91,
+ "mean_tokens": 219.4,
+ "truncated": 190,
+ "tasks": {
+  "comprehension": {
+   "acc_correct": 48,
+   "acc_n": 116,
+   "acc_expected_n": 116,
+   "acc_pct": 41.38,
+   "rouge_n": 651,
+   "rouge_expected_n": 651,
+   "rouge_pct": 18.74
+  },
+  "recognition": {
+   "acc_correct": 354,
+   "acc_n": 725,
+   "acc_expected_n": 725,
+   "acc_pct": 48.83,
+   "rouge_n": 455,
+   "rouge_expected_n": 455,
+   "rouge_pct": 10.6
+  },
+  "reasoning": {
+   "acc_correct": 44,
+   "acc_n": 148,
+   "acc_expected_n": 148,
+   "acc_pct": 29.73,
+   "rouge_n": 571,
+   "rouge_expected_n": 571,
+   "rouge_pct": 17.56
+  },
+  "prescience": {
+   "acc_correct": 42,
+   "acc_n": 108,
+   "acc_expected_n": 108,
+   "acc_pct": 38.89,
+   "rouge_n": 191,
+   "rouge_expected_n": 191,
+   "rouge_pct": 10.96
+  }
+ }
+}
